@@ -69,4 +69,4 @@ class AutorController {
   }
 }
 
-export default AutorController
+export default AutorController;

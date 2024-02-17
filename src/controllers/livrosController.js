@@ -13,7 +13,7 @@ class LivroController {
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 
   static listarLivroPorId = async (req, res, next) => {
     try {
@@ -33,7 +33,7 @@ class LivroController {
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 
   static cadastrarLivro = async (req, res, next) => {
     try {
@@ -45,7 +45,7 @@ class LivroController {
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 
   static atualizarLivro = async (req, res, next) => {
     try {
@@ -57,7 +57,7 @@ class LivroController {
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 
   static excluirLivro = async (req, res, next) => {
     try {
@@ -69,7 +69,7 @@ class LivroController {
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 
   static listarLivroPorEditora = async (req, res, next) => {
     try {
@@ -82,6 +82,7 @@ class LivroController {
       next(erro);
     }
   }
+
 }
 
-export default LivroController
+export default LivroController;
