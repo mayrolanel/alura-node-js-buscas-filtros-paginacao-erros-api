@@ -20,7 +20,7 @@ const livroSchema = new mongoose.Schema(
         message: "A editora {VALUE} não é um valor válido."
       }
     },
-    numeroPaginas: {
+    paginas: {
       type: Number,
       validate: {
         validator: (valor) => {
@@ -28,6 +28,9 @@ const livroSchema = new mongoose.Schema(
         },
         message: "O número de páginas deve estar entre 10 e 5.000."
       },
+    },
+    preco: {
+      type: Number,
     }
   }
 );
