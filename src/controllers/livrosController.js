@@ -1,5 +1,5 @@
 import PaginaNaoEncontrada from "../erros/PaginaNaoEncontrada.js";
-import livros from "../models/Livro.js";
+import { livros } from "../models/index.js";
 
 class LivroController {
 
@@ -26,7 +26,7 @@ class LivroController {
       if (livroResultados != null) {
         res.status(200).send(livroResultados);
       } else {
-        next(new PaginaNaoEncontrada("Id do Livro não localizado."))
+        next(new PaginaNaoEncontrada("Id do Livro não localizado."));
       }
 
       
@@ -81,7 +81,7 @@ class LivroController {
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 
 }
 

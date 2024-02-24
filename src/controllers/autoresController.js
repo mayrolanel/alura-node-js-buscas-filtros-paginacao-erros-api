@@ -1,5 +1,5 @@
-import autores from "../models/Autor.js";
-import PaginaNaoEncontrada from "../erros/PaginaNaoEncontrada.js"
+import { autores } from "../models/index.js";
+import PaginaNaoEncontrada from "../erros/PaginaNaoEncontrada.js";
 
 class AutorController {
 
@@ -12,7 +12,7 @@ class AutorController {
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 
   static listarAutorPorId = async (req, res, next) => {
 
@@ -23,13 +23,13 @@ class AutorController {
       if (autorResultado != null) {
         res.status(200).send(autorResultado);
       } else {
-        next(new PaginaNaoEncontrada("Id do Autor não localizado."))
+        next(new PaginaNaoEncontrada("Id do Autor não localizado."));
       }
       
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 
 
   static cadastrarAutor = async (req, res, next) => {
@@ -42,7 +42,7 @@ class AutorController {
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 
   static atualizarAutor = async (req, res, next) => {
     try {
@@ -54,7 +54,7 @@ class AutorController {
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 
   static excluirAutor = async (req, res, next) => {
     try {
@@ -66,7 +66,7 @@ class AutorController {
     } catch (erro) {
       next(erro);
     }
-  }
+  };
 }
 
 export default AutorController;
